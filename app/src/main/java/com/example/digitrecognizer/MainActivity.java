@@ -17,7 +17,7 @@ import android.graphics.PointF;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener  {
 
-    private static final int Pixel_Width=28;
+    private static final int Pixel_Width=50;
 
     //User Interface
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         drawModel = new DrawModel(Pixel_Width,Pixel_Width);
 
-        drawView.setmodel(drawModel);
+        drawView.setModel(drawModel);
         drawView.setOnTouchListener(this);
 
         clearBtn = (Button) findViewById(R.id.btn_clear);
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         }
 
-        if(action == MotionEvent.ACTION_MOVE)
+        else if(action == MotionEvent.ACTION_MOVE)
         {
             processTouchMove(event);
             return true;
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         else if(action == MotionEvent.ACTION_UP)
         {
-            processTouchUp(event);
+            processTouchUp();
             return true;
         }
 
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         float lastConvX = mTmpPiont.x;
         float lastConvY = mTmpPiont.y;
 
-        drawModel.startLine(lastConvX,LastConvY);
+        drawModel.startLine(lastConvX,lastConvY);
     }
 
     private void processTouchMove(MotionEvent event) {

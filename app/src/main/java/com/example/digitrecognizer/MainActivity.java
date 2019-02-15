@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private DrawModel drawModel;
     private PointF mTmpPiont = new PointF();
 
+
+    //points to hold 
     private float mLastX;
     private float mLastY;
 

@@ -1,4 +1,4 @@
-<h1> Digit recognizer<h1> 
+<h1> Digit recognizer</h1> 
 <br>
 In this a machine learning model is trained to recognize digits.
 <br>
